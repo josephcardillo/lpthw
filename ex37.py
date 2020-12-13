@@ -135,11 +135,54 @@ def integer_test():
             num = int(input("Please enter a number: "))
             break
         except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
+            print("Exception: Oops! That was no valid number. Try again...")
+        finally:
+            print("This will print regardless of whether the 'Try' statement produces an exception.")
+# exec - https://docs.python.org/3.7/library/functions.html#exec
+# Run a string as python
+
+# >>> program = 'a = 5\nb = 10\nprint("Sum of a and b is:", a + b)'
+# >>> exec(program)
+# Sum of a and b is: 15
+
+# finally - https://docs.python.org/3.7/reference/compound_stmts.html#finally
+# "If finally is present, it specifies a ‘cleanup’ handler."
+# https://docs.python.org/3.7/tutorial/errors.html
+    # Defining Clean-up Actions
+
+# global - https://docs.python.org/3.7/reference/simple_stmts.html#the-global-statement
+
+# Lambda expressions - https://docs.python.org/3.7/tutorial/controlflow.html#lambda-expressions
+
+def make_incrementor(n):
+    return lambda x: x + n
+
+# >>> f = make_incrementor(2)
+# >>> f(3)
+# 5
+
+# pass statement - https://docs.python.org/3.7/tutorial/controlflow.html#pass-statements
+# The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action.
+
+def pass_statement():
+    while True:
+        pass # busy - wait for keyboard interrupt (ctrl + c)
+
+# raise - raising exceptions
+# https://docs.python.org/3.7/tutorial/errors.html#raising-exceptions
+
+def raise_exception():
+    try:
+        raise NameError('HiThere')
+    except NameError:
+        print('An exception flew by!')
+        raise
 
 # find_even_num()
 # find_even_num()
 # health_check()
 # weather()
 # with_statement()
-integer_test()
+# integer_test()
+# pass statement()
+# raise_exception()
