@@ -36,31 +36,31 @@ def bear_room():
     # bear_moved variable is set to False
     bear_moved = False
 
-    # This creates an infinite loop.
-    # while True:
-    #     # print(f"Bear moved is {bear_moved}.")
-    #     choice = input("> ") # prompts user for input
-    #     # if user types "take honey"
-    #     if choice == "take honey":
-    #         # call dead function
-    #         dead("The bear looks at you then slaps your face off.")
-    #     # if user types "taunt bear" and bear_moved is... 
-    #     # in looking at https://docs.python.org/3.7/library/stdtypes.html#list
-    #     # it seems to indicate that "not x" means "if x is false, then True, else False". So in this case, not bear_moved implies, "if bear_moved is false", which it is, then True. That's the only thing that would make sense here.
-    #     elif choice == "taunt bear" and not bear_moved:
-    #         # print(f"bear_moved is {bear_moved}.")
-    #         # print(f"not bear_moved is {not bear_moved}")
-    #         print("The bear has moved from the door.")
-    #         print("You can go through it now.")
-    #         bear_moved = True
-    #     elif choice == "taunt bear" and bear_moved:
-    #         # print(f"bear_moved is {bear_moved}.")
-    #         # print(f"not bear_moved is {not bear_moved}")
-    #         dead("The bear gets pissed off and chews your leg off.")
-    #     elif choice == "open door" and bear_moved:
-    #         gold_room()
-    #     else:
-    #         print("I got no idea what that means.")
+    This creates an infinite loop.
+    while True:
+        # print(f"Bear moved is {bear_moved}.")
+        choice = input("> ") # prompts user for input
+        # if user types "take honey"
+        if choice == "take honey":
+            # call dead function
+            dead("The bear looks at you then slaps your face off.")
+        # if user types "taunt bear" and bear_moved is... 
+        # in looking at https://docs.python.org/3.7/library/stdtypes.html#list
+        # it seems to indicate that "not x" means "if x is false, then True, else False". So in this case, not bear_moved implies, "if bear_moved is false", which it is, then True. That's the only thing that would make sense here.
+        elif choice == "taunt bear" and not bear_moved:
+            # print(f"bear_moved is {bear_moved}.")
+            # print(f"not bear_moved is {not bear_moved}")
+            print("The bear has moved from the door.")
+            print("You can go through it now.")
+            bear_moved = True
+        elif choice == "taunt bear" and bear_moved:
+            # print(f"bear_moved is {bear_moved}.")
+            # print(f"not bear_moved is {not bear_moved}")
+            dead("The bear gets pissed off and chews your leg off.")
+        elif choice == "open door" and bear_moved:
+            gold_room()
+        else:
+            print("I got no idea what that means.")
 
     # refactoring code
     choice = input("> ")

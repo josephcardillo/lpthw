@@ -119,6 +119,7 @@ def find_even_num():
 
 # as - part of the with statement
     # https://docs.python.org/3.7/whatsnew/2.6.html#pep-343-the-with-statement
+# with - https://docs.python.org/3.7/whatsnew/2.6.html#pep-343-the-with-statement
 
 def with_statement():
     with open("test.txt", 'r') as file:
@@ -131,7 +132,7 @@ def with_statement():
 
 def integer_test():
     while True:
-        try:
+        try: # try this block. If an exception, go to except.
             num = int(input("Please enter a number: "))
             break
         except ValueError:
@@ -177,6 +178,22 @@ def raise_exception():
     except NameError:
         print('An exception flew by!')
         raise
+
+# yield statement - https://docs.python.org/3.7/reference/simple_stmts.html#yield
+# yield expression - https://docs.python.org/3.7/reference/expressions.html#yieldexpr
+# https://www.python.org/dev/peps/pep-0255/
+
+def gen():  # defines a generator function
+    yield 123
+
+def fib():
+    a, b = 0, 1
+    while 1:
+       yield b
+       a, b = b, a+b
+
+# decorator @ - https://docs.python.org/3.7/reference/compound_stmts.html#function
+# # https://docs.python.org/3.7/glossary.html#term-decorator
 
 # find_even_num()
 # find_even_num()

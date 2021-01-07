@@ -27,3 +27,6 @@ elements = []
 # now we can prinjt them out too
 for i in elements:
     print(f"Element was {i}")
+
+# Other things you can do with lists:
+# https://docs.python.org/3/library/stdtypes.html#list
